@@ -27,7 +27,7 @@ def extract_movie_details(movie_link):
             'div', attrs={'class': 'sc-385ac629-3 kRUqXl'})
         if movie_data is not None:
             title = movie_data.find('h1').get_text()
-            data = movie_data.find('a', attrs={
+            date = movie_data.find('a', attrs={
                                    'class': 'ipc-link ipc-link--baseAlt ipc-link--inherit-color'}).get_text().strip()
 
         rating = movie_soup.find('span', attrs={'class': 'sc-bde20123-1 iZlgcd'}).get_text() if movie_soup.find(
